@@ -1,0 +1,147 @@
+.d-grid {
+    width: 80%;
+    margin: 0 auto;
+
+    /*
+    Una página, cuando se trabaja por cuadrícula,
+    se divide en 12 partes (12 columnas).
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.d-flex {
+    /*
+    Se trabaja con una posición flexible. Tú adaptas los elementos como quieras.
+    Lo único, los hijos directos deben de tener un tamaño asignado.
+    */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.d-flex p {
+    width: 400px;
+}
+
+
+.item-form {
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 10px;
+    margin: 0 auto 20px;
+}
+
+.item-form label {
+    display: block;
+}
+
+.item-form input {
+    display: block;
+}
+
+
+/* ############################################# */
+/* ################## PÁGINA JUEGOS ########### */
+/* ########################################### */
+
+
+.section-4 {
+    /* Padding arriba y abajo de 20px y la izq/dcha 25px */
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    /*padding: 20px; !* Todos los lados 20px *!*/
+    /*padding: 20px 15px; !* PrimerValor (arriba y abajo), SegundoValor (izquierda y derecha) *!*/
+    /*padding: 20px 15px 20px; !* PrimerValor (arriba), SegundoValor (izquierda y derecha), TercerValor (Abajo) *!*/
+    /*padding: 20px 15px 20px 15px; !* PrimerValor (arriba), SegundoValor (derecha), TercerValor (Abajo), CuartoValor (Izquierda) *!*/
+    width: 85%;
+    padding: 20px 25px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.section-4 > h2 {
+    margin-bottom: 20px;
+}
+
+.section-4 > div.carousel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr */
+    grid-column-gap: 25px;
+}
+
+.section-4 > div.carousel .item {
+    background-color: #FFF;
+    padding: 10px;
+    /*
+    HEXADECIMAL => #000000
+    RGB => rgb(0, 0, 0)
+    RGBA => rgba(0, 0, 0, 0.1)
+    */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.section-4 > div.carousel .item img {
+    width: 100%;
+}
+
+
+.section-4 > div.carousel .item .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #8f8f8f;
+    padding-bottom: 10px;
+}
+
+.section-4 > div.carousel .item .info > div {
+    width: 50%;
+}
+
+.section-4 > div.carousel .item .info > div p {
+    text-align: center;
+    margin: 0;
+}
+
+.section-4 > div.carousel .item .info > div p:first-of-type {
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+
+.section-4 > div.carousel .item .info > div p:last-of-type {
+    color: #8f8f8f;
+}
+
+.section-4 > div.carousel .item .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

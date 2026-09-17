@@ -37,6 +37,7 @@ $valor2 = $hola ?? $valor . "val2";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo PHP</title>
+    <link rel="stylesheet" href="style copy.css">
 </head>
 <body>
  
@@ -86,9 +87,50 @@ foreach($biblio as $clave=>$valor){
     }
 }
 
-
+$juegos = array(
+        ["image" => "./image.jpg", "nombre" => "Juego 1", "posts" => 235, "members" => 678],
+        ["image" => "./image.jpg", "nombre" => "Juego 2", "posts" => 65, "members" => 5],
+        ["image" => "./image.jpg", "nombre" => "Juego 3", "posts" => 4, "members" => 15],
+        ["image" => "./image.jpg", "nombre" => "Juego 4", "posts" => 388, "members" => 500],
+        ["image" => "./image.jpg", "nombre" => "Juego 5", "posts" => 678, "members" => 755],
+);
 
 ?>
+<main>
+
+    <section class="section-4">
+        <h2>Our communities</h2>
+
+        <div class="carousel">
+
+            <?php
+            foreach($juegos as $juego){
+            ?>
+
+                <div class="item">
+                    <img src="<?php echo $juego['image']; ?>" alt="<?php echo $juego['nombre']; ?>">
+                    <div class="info">
+                        <div>
+                            <p><?php echo $juego['posts']; ?></p>
+                            <p>Posts</p>
+                        </div>
+                        <div>
+                            <p><?php echo $juego['members']; ?></p>
+                            <p>Members</p>
+                        </div>
+                    </div>
+                    <button class="btn" type="button">Join Group</button>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </section>
+</main>
+
+
+
+
 
 </body>
 </html>
