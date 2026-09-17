@@ -1,0 +1,49 @@
+.section-2 {
+    background-color: #f4f4f4;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns:60% 28%;
+    padding: 15px 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: end;
+}
+
+img {
+    height: 310px;
+    width: 100%;
+}
+
+#container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    
+}
+
+.div-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    align-items: center;
+}
+
+.texto {
+    padding-right: 15px;
+}
+
+.texto > p {
+    color: gray;
+    font-weight: lighter;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: rgb(84, 184, 246);
+    transition: 0.7s;
+}
