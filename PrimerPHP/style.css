@@ -1,0 +1,25 @@
+.d-grid {
+    width:80%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.d-flex p { /*los hijos deben tener tamaño con el flex*/
+    width: 400px;
+}
+
+.f-grid {
+    
+    width:80%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
