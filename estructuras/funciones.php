@@ -1,5 +1,10 @@
 <?php
 
+function estructuraProductoHTML($componente): void {
+    echo "<p>Producto: " . $componente["nombre"] . ", " . $componente["precio"] . "<span> " . $componente["categoria"] . "</span></p>";
+}
+
+
 function Saludar($nombre): void {
     echo "<h1>$nombre</h1>";
 }
@@ -23,8 +28,6 @@ $componentes = Array(
 
 // Producto: Monitor, 249.95 <span>curved</span>
 foreach ($componentes as $componente){
-    
-    echo "<p>Producto: " . $componente["nombre"] . ", " . $componente["precio"] . "<span>" . $componente["categoria"] . "</span></p>";
+    estructuraProductoHTML($componente);
 }
-
 ?>
