@@ -132,19 +132,22 @@ $users = Array(
 );
 
 $usuario = (
-    ["username" => "user05", "password" => "contrasena4"]
+    ["username" => "user04", "password" => "contrasena4"]
 );
 
 $encontrado = false;
 foreach($users as $user){
     foreach($user as $key => $value){
         if ($key == "username"){
-            if ($user[$key] === $usuario[$key])
+            if ($user[$key] === $usuario[$key]){
                 $encontrado = true;
+                if ($user["password"] === $usuario["password"]){
+                    echo "Bienvenido " . $user["username"] . " - Rol " . $user["role"];
+                }
+                else
+                    echo "Contraseña incorrecta";
+            }
         }
     }
 }
-echo $encontrado ? "Usuario encontrado" : "Usuario no existe";
-
-
-?>
+if (!$encontrado) echo "Usuario no existe";
