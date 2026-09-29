@@ -1,0 +1,59 @@
+main {
+    /*
+    1 valor : arriba, abajo, izq, der
+    2 : arriba/abajo, izq/der
+    3 : arriba, izq/der, abajo
+    4 : arriba der abajo izq
+    */
+    padding: 60px 50px;
+    /*background-color: aqua;*/
+}
+
+section {
+    border: 1px solid #f4f4f4;
+    border-radius: 15px;
+    padding: 50px 40px;
+    
+    /*background-color: rgb(119, 255, 255);*/
+}
+
+section.juegos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*1fr, 1fr, 1fr, 1fr*/
+    grid-gap: 35px;
+}
+
+section.juegos > .item {
+    border: 1px dashed #0d3104;
+    border-radius: 15px;
+    padding: 25px 15px;
+    
+    /**/
+}
+
+.title {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgb(41, 131, 0);
+    padding: 25px 5px;
+    color: white;
+    border-radius: 10px;
+}
+
+.category {
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.description {
+    color: gray;
+    text-decoration: wavy;
+
+}
+
+h2:hover {
+    color: yellowgreen;
+}
