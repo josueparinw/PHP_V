@@ -1,7 +1,7 @@
 <?php
 
 $peliculas = [
-    ["id" => 1, "titulo" => "Iron Man", "universo" => "Marvel", "director" => "Jon Favreau", "anyo" => 2008, "duracion" => 126, "puntuacion" => 7.9, "disponible" => true, "imagen" => "img/ironman.jpg"],
+    ["id" => 1, "titulo" => "Iron Man", "universo" => "Marvel", "director" => "Jon Favreau", "anyo" => 2008, "duracion" => 126, "puntuacion" => 7.9, "disponible" => true, "imagen" => "img/ironman0.jpg"],
     ["id" => 2, "titulo" => "The Dark Knight", "universo" => "DC", "director" => "Christopher Nolan", "anyo" => 2008, "duracion" => 152, "puntuacion" => 9.0, "disponible" => true, "imagen" => "img/darkknight.jpg"],
     ["id" => 3, "titulo" => "Avengers: Endgame", "universo" => "Marvel", "director" => "Anthony y Joe Russo", "anyo" => 2019, "duracion" => 181, "puntuacion" => 8.4, "disponible" => true, "imagen" => "img/endgame.jpg"],
     ["id" => 4, "titulo" => "Aquaman", "universo" => "DC", "director" => "James Wan", "anyo" => 2018, "duracion" => 143, "puntuacion" => 6.9, "disponible" => false, "imagen" => "img/aquaman.jpg"],

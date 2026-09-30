@@ -1,13 +1,13 @@
-section.peliculas {
+section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 2px solid #fcee2b;
+    border: 2px solid #fc2bd6;
     padding: 15px;
     margin: 20px;
 }
 
 section > .item {
-    background-color: blanchedalmond;
+    background-color: rgb(249, 127, 127);
     padding: 25px;
 }
 
