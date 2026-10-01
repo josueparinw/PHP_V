@@ -8,18 +8,19 @@ include_once 'arrays_a_usar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" type="text/css" href="style-p.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 </head>
 <body>
 
     <?php
     
     function imprimirDatos($pelicula): void{
-        echo "<image src=" . $pelicula["imagen"] . ">";
+        echo "<img src=" . $pelicula["imagen"] . ">";
         echo "<div class='datos'>";
         echo "<h2>" . $pelicula["titulo"] . "</h2>";
         echo "<h3>" . $pelicula["universo"] . "</h3>";
-        echo "<p>" . $pelicula["anyo"] ."            ". $pelicula["duracion"] . "</p>";
+        echo "<p>" . $pelicula["anyo"] ."  ⏱ ". $pelicula["duracion"] . "min</p>";
         echo "<p> ★ " . $pelicula["puntuacion"] . "</p>";
         
         if (!$pelicula["disponible"]):
@@ -30,6 +31,7 @@ include_once 'arrays_a_usar.php';
 
     ?>
 
+    <h2 class="seccion">Todo</h2>
     <section class="peliculas">
 
 
@@ -47,10 +49,11 @@ include_once 'arrays_a_usar.php';
 
     </section>
 
+    <?php $filtrouniverso = "Marvel"; ?>
+    <h2 class="seccion">Universo <?=$filtrouniverso?></h2>
     <section class="universo">
 
         <?php
-        $filtrouniverso = "Marvel";
         foreach($peliculas as $pelicula):
             if ($pelicula["universo"]===$filtrouniverso):
             ?>
@@ -66,6 +69,7 @@ include_once 'arrays_a_usar.php';
 
     </section>
 
+    <h2 class="seccion">Mejor puntuadas</h2>
     <section class="best-ranked">
 
         <?php
@@ -84,7 +88,7 @@ include_once 'arrays_a_usar.php';
 
     </section>
 
-
+    <h2 class="seccion">Watchlist</h2>
     <section class="watch">
 
         <?php
@@ -95,15 +99,15 @@ include_once 'arrays_a_usar.php';
         ?>
 
         <div class="item">
-            <image src= <?= $pelicula["imagen"] ?> >
+            <img src= <?= $pelicula["imagen"] ?> >
             <div class="datos">
             <h2> <?= $pelicula["titulo"] ?> </h2>
             <p> <?= $pelicula["anyo"] ?> </p>
 
             <?php if($w["vista"]): ?>
-                <p>NO VISTA</p>
+                <p class="vista">VISTA</p>
             <?php else: ?>
-                <p>VISTA</p>
+                <p class="vista">NO VISTA</p>
             <?php endif;?>
             </div>
         </div>
@@ -116,14 +120,18 @@ include_once 'arrays_a_usar.php';
 
     </section>
 
+    <h2 class="seccion">Añadir al catálogo</h2>
     <section class="anyadir-peli">
         <form action="">
 
         <label for="titulo">Título: </label>
-        <input type="text"><br><br>
+        <input type="text" placeholder="Shrek"><br><br>
         
         <label for="universo">Universo: </label>
-        <input type="text"><br><br>
+        <select name="universo" id="universo">
+            <option value="Marvel">Marvel</option>
+            <option value="DC">DC</option>
+        </select><br><br>
         
         <label for="director">Director: </label>
         <input type="text"><br><br>
@@ -135,7 +143,7 @@ include_once 'arrays_a_usar.php';
         <input type="number"><br><br>
         
         <label for="puntuacion">Puntuación: </label>
-        <input type="number"><br><br>
+        <input type="number" min="0" max="10"><br><br>
 
         <label for="imagen">Imagen: </label>
         <input type="file"><br><br>
@@ -148,27 +156,6 @@ include_once 'arrays_a_usar.php';
         </form>
         
     </section>
-
-
-    /*
-    basándome en la imagen del kit UI Moviora, los colores principales de su paleta oscura en formato hexadecimal son los siguientes:
-🖤 Tonos de Fondo (Modo Oscuro)
-• #0D0D13 (Negro profundo con matiz azulado / Fondo principal de las pantallas)
-• #161622 (Gris oscuro azulado / Fondo de tarjetas, contenedores de texto y barras de navegación)
-💜 Colores de Acento y UI (Destacados y Selección)
-• #6366F1 (Púrpura/Índigo vibrante / Botón principal "Buy Ticket" y asientos seleccionados)
-• #312E81 (Púrpura oscuro opaco / Estado de asientos ya reservados)
-• #1E1B4B (Púrpura muy oscuro / Fondos secundarios de interacción)
-🤍 Tipografía y Elementos de Lectura
-• #FFFFFF (Blanco puro / Títulos principales y texto destacado)
-• #9CA3AF (Gris claro / Textos secundarios, fechas y etiquetas secundarias)
-⭐️ Detalles Adicionales
-• #F59E0B (Amarillo ámbar / Puntuación de las películas y estrellas de valoración)
-Si lo deseas, dime:
-• ¿Quieres que te ayude a crear una combinación de colores alternativa basada en esta estética?
-• ¿Necesitas los códigos en otro formato (como RGB o HSL)?
-• ¿Te gustaría generar el código CSS listo para usar en tu proyecto?
-    */
 
 </body>
 </html>

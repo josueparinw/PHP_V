@@ -12,7 +12,7 @@ $peliculas = [
 ];
 
 $watchlist = [
-    ["pelicula_id" => 1, "vista" => true],
-    ["pelicula_id" => 3, "vista" => false],
+    ["pelicula_id" => 2, "vista" => true],
+    ["pelicula_id" => 5, "vista" => false],
     ["pelicula_id" => 8, "vista" => false],
 ];
