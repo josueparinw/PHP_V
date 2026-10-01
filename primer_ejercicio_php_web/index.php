@@ -8,7 +8,7 @@ include_once 'arrays_a_usar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-p.css">
 </head>
 <body>
 
@@ -16,14 +16,16 @@ include_once 'arrays_a_usar.php';
     
     function imprimirDatos($pelicula): void{
         echo "<image src=" . $pelicula["imagen"] . ">";
+        echo "<div class='datos'>";
         echo "<h2>" . $pelicula["titulo"] . "</h2>";
         echo "<h3>" . $pelicula["universo"] . "</h3>";
         echo "<p>" . $pelicula["anyo"] ."            ". $pelicula["duracion"] . "</p>";
         echo "<p> ★ " . $pelicula["puntuacion"] . "</p>";
         
         if (!$pelicula["disponible"]):
-            echo "<p>**No disponible**</p>";
+            echo "<p class='no-disp'>**No disponible**</p>";
         endif;
+        echo "</div>";
     }
 
     ?>
@@ -34,7 +36,7 @@ include_once 'arrays_a_usar.php';
         <?php 
         foreach($peliculas as $pelicula):
         ?>
-        <div class="item">
+        <div class="item <?php if(!$pelicula['disponible']){ echo 'no-disp2'; } ?>">
             <?php
             imprimirDatos($pelicula)
             ?>
@@ -94,6 +96,7 @@ include_once 'arrays_a_usar.php';
 
         <div class="item">
             <image src= <?= $pelicula["imagen"] ?> >
+            <div class="datos">
             <h2> <?= $pelicula["titulo"] ?> </h2>
             <p> <?= $pelicula["anyo"] ?> </p>
 
@@ -102,7 +105,7 @@ include_once 'arrays_a_usar.php';
             <?php else: ?>
                 <p>VISTA</p>
             <?php endif;?>
-
+            </div>
         </div>
 
         <?php
@@ -145,6 +148,27 @@ include_once 'arrays_a_usar.php';
         </form>
         
     </section>
+
+
+    /*
+    basándome en la imagen del kit UI Moviora, los colores principales de su paleta oscura en formato hexadecimal son los siguientes:
+🖤 Tonos de Fondo (Modo Oscuro)
+• #0D0D13 (Negro profundo con matiz azulado / Fondo principal de las pantallas)
+• #161622 (Gris oscuro azulado / Fondo de tarjetas, contenedores de texto y barras de navegación)
+💜 Colores de Acento y UI (Destacados y Selección)
+• #6366F1 (Púrpura/Índigo vibrante / Botón principal "Buy Ticket" y asientos seleccionados)
+• #312E81 (Púrpura oscuro opaco / Estado de asientos ya reservados)
+• #1E1B4B (Púrpura muy oscuro / Fondos secundarios de interacción)
+🤍 Tipografía y Elementos de Lectura
+• #FFFFFF (Blanco puro / Títulos principales y texto destacado)
+• #9CA3AF (Gris claro / Textos secundarios, fechas y etiquetas secundarias)
+⭐️ Detalles Adicionales
+• #F59E0B (Amarillo ámbar / Puntuación de las películas y estrellas de valoración)
+Si lo deseas, dime:
+• ¿Quieres que te ayude a crear una combinación de colores alternativa basada en esta estética?
+• ¿Necesitas los códigos en otro formato (como RGB o HSL)?
+• ¿Te gustaría generar el código CSS listo para usar en tu proyecto?
+    */
 
 </body>
 </html>
