@@ -8,7 +8,7 @@ include_once 'arrays_a_usar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 </head>
 <body>
@@ -124,32 +124,48 @@ include_once 'arrays_a_usar.php';
     <section class="anyadir-peli">
         <form action="">
 
-        <label for="titulo">Título: </label>
-        <input type="text" placeholder="Shrek"><br><br>
+        <div class="campo">
+            <label for="titulo">Título: </label>
+            <input type="text" placeholder="Shrek"><br><br>
+        </div>
         
-        <label for="universo">Universo: </label>
-        <select name="universo" id="universo">
-            <option value="Marvel">Marvel</option>
-            <option value="DC">DC</option>
-        </select><br><br>
+        <div class="campo">
+            <label for="universo">Universo: </label>
+            <select name="universo" id="universo">
+                <option value="Marvel">Marvel</option>
+                <option value="DC">DC</option>
+            </select><br><br>
+        </div>
         
-        <label for="director">Director: </label>
-        <input type="text"><br><br>
+        <div class="campo">
+            <label for="director">Director: </label>
+            <input type="text"><br><br>
+        </div>
 
-        <label for="anyo">Año: </label>
-        <input type="number"><br><br>
+        <div class="campo">
+            <label for="anyo">Año: </label>
+            <input type="number"><br><br>
+        </div>
         
-        <label for="duracion">Duración: </label>
-        <input type="number"><br><br>
+        <div class="campo">
+            <label for="duracion">Duración: </label>
+            <input type="number"><br><br>
+        </div>
         
-        <label for="puntuacion">Puntuación: </label>
-        <input type="number" min="0" max="10"><br><br>
+        <div class="campo">
+            <label for="puntuacion">Puntuación: </label>
+            <input type="number" min="0" max="10"><br><br>
+        </div>
 
-        <label for="imagen">Imagen: </label>
-        <input type="file"><br><br>
+        <div class="campo">
+            <label for="imagen">Imagen: </label>
+            <input type="file"><br><br>
+        </div>
 
-        <label for="disponible">Disponible: </label>
-        <input type="checkbox"><br><br>
+        <div class="campo">
+            <label for="disponible">Disponible: </label>
+            <input type="checkbox"><br><br>
+        </div>
 
         <button type="submit">Enviar</button>
 

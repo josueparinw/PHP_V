@@ -78,3 +78,32 @@ section > .item:hover {
     text-align: center;
 }
 
+form {
+    grid-column: 1/-1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo {
+    background-color: #110F2B;
+
+    border: #5f59b4 solid 2px;
+    box-shadow: #5f59b4 2px 2px 7px;
+    border-radius: 35px;
+
+    padding: 10px 35px 0px;
+    width: fit-content;
+    line-height: 10px;
+}
+
+button {
+    color: white;
+    background: linear-gradient(to  right, #110F2B, #5f59b4) ;
+    
+    box-shadow: #5f59b4 2px 2px 7px;
+    border-radius: 35px;
+    padding: 10px 20px ;
+    width: fit-content;
+    
+}
