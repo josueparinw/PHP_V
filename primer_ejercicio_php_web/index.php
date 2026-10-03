@@ -144,17 +144,17 @@ include_once 'arrays_a_usar.php';
 
         <div class="campo">
             <label for="anyo">Año: </label>
-            <input type="number"><br><br>
+            <input type="number" min="1888"><br><br>
         </div>
         
         <div class="campo">
             <label for="duracion">Duración: </label>
-            <input type="number"><br><br>
+            <input type="number" min="0"><br><br>
         </div>
         
         <div class="campo">
             <label for="puntuacion">Puntuación: </label>
-            <input type="number" min="0" max="10"><br><br>
+            <input type="number" min="0" max="10" placeholder="0-10"><br><br>
         </div>
 
         <div class="campo">

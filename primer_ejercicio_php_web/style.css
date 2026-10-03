@@ -78,32 +78,44 @@ section > .item:hover {
     text-align: center;
 }
 
+.anyadir-peli {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+}
+
 form {
-    grid-column: 1/-1;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .campo {
-    background-color: #110F2B;
-
-    border: #5f59b4 solid 2px;
-    box-shadow: #5f59b4 2px 2px 7px;
+    color: rgb(255, 255, 255);
+    background-color: #1c1946;
     border-radius: 35px;
 
-    padding: 10px 35px 0px;
-    width: fit-content;
+    padding: 10px 25px 0px;
     line-height: 10px;
+    margin-bottom: 20px;
+    width: fit-content;
 }
 
 button {
-    color: white;
-    background: linear-gradient(to  right, #110F2B, #5f59b4) ;
-    
-    box-shadow: #5f59b4 2px 2px 7px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to  right, #312E81, #110F2B) ;
     border-radius: 35px;
-    padding: 10px 20px ;
-    width: fit-content;
-    
+    border: 5px double;
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+input {
+    color: white;
+    background-color: rgba(255, 255, 255, .1);
+    border: 0;
+    border-radius: 25px;
+    padding: 5px 10px;
+    accent-color: #6366F1;
 }
