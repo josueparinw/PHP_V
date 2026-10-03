@@ -56,7 +56,7 @@ section > .item {
 
 
 section > .item:hover {
-    background-color: rgba(28, 28, 41, 0.9);
+    background-color: rgb(28, 28, 41);
 }
 
 .datos > .vista {
@@ -73,8 +73,9 @@ section > .item:hover {
     font-size: xxx-large;
     letter-spacing: 4px;
     margin-bottom: -2px;
+    margin-top: 80px;
     text-decoration: overline;
-    text-shadow: #6366F1 2px 2px 3px;
+    text-shadow: #6366F1 2px 2px 5px;
     text-align: center;
 }
 
@@ -86,14 +87,19 @@ section > .item:hover {
 }
 
 form {
-    width: fit-content;
     margin: 0 auto;
+    text-align: center;
+    background-color: #0D0D13;
+
+    padding: 25px;
+    border: 5px solid;
+    border-image: linear-gradient(to right, #312E81, #1c1946) 1;
 }
 
 .campo {
-    color: rgb(255, 255, 255);
+    color: white;
     background-color: #1c1946;
-    border-radius: 35px;
+    border-radius: 25px;
 
     padding: 10px 25px 0px;
     line-height: 10px;
@@ -101,21 +107,28 @@ form {
     width: fit-content;
 }
 
-button {
-    color: rgb(255, 255, 255);
-    background: linear-gradient(to  right, #312E81, #110F2B) ;
-    border-radius: 35px;
-    border: 5px double;
-    padding: 10px 20px;
-    font-size: medium;
-    font-weight: bold;
-}
-
 input {
     color: white;
     background-color: rgba(255, 255, 255, .1);
     border: 0;
     border-radius: 25px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     accent-color: #6366F1;
+    font-size: 15px;
+}
+
+select, ::file-selector-button {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+button[type=submit] {
+    color: white;
+    background: linear-gradient(to  right, #312E81, #110F2B) ;
+    border-radius: 25px;
+    border: 5px double white;
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bold;
 }

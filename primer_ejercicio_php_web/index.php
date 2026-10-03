@@ -8,7 +8,7 @@ include_once 'arrays_a_usar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Primer Ejercicio PHP Web</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 </head>
 <body>
@@ -164,7 +164,7 @@ include_once 'arrays_a_usar.php';
 
         <div class="campo">
             <label for="disponible">Disponible: </label>
-            <input type="checkbox"><br><br>
+            <input type="checkbox" checked><br><br>
         </div>
 
         <button type="submit">Enviar</button>
