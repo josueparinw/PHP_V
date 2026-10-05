@@ -54,9 +54,13 @@ section > .item {
     padding: 10px;
 }
 
+.no-disp2 > img{
+    filter: grayscale(95%);
+}
 
 section > .item:hover {
     background-color: rgb(28, 28, 41);
+    box-shadow: 0px 0px 5px 4px #6366F1 ;
 }
 
 .datos > .vista {
