@@ -5,7 +5,7 @@ function redirect($file, $error = null): void
 {
     $url = "./" . $file . ".php";
     if ($error != null) {
-        $url .= "?error=" . $error;
+        $url .= "?error=" . $error; // .=  concatena y guarda
     }
     header("Location: $url");
     exit();
@@ -40,17 +40,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      * */
 
     $arr = [
-        ["usuario" => "camilo@gmail.com", "passwd" => "12345"],
-        ["usuario" => "pepe@gmail.com", "passwd" => "12345"],
+        ["usuario" => "camilo@gmail.com", "passwd" => "12345", "first_name" => "Juan Camilo"],
+        ["usuario" => "pepe@gmail.com", "passwd" => "12345", "first_name" => "Pedro"],
     ];
 
     $correo_existe = false;
     $passwd_correcta = false;
+    $f_name = "";
     foreach ($arr as $e) {
         if ($e["usuario"] === $email) {
             $correo_existe = true;
             if ($passwd === $e["passwd"]) {
                 $passwd_correcta = true;
+                $f_name = $e["first_name"];
             }
         }
     }
@@ -59,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($passwd_correcta) {
             /* Contraseña correcta. Permitimos acceder al panel de control */
 
-            $_SESSION["usuario_logged"] = "Juan Camilo";
+            $_SESSION["usuario_logged"] = $f_name;
             $_SESSION["productos"] = $productos[$email];
             redirect("dashboard");
         } else {

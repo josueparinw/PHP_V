@@ -3,7 +3,7 @@
 session_start();
 
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") { // el metodo viene del boton de cerrar sesion
 //    unset($_SESSION["usuario_logged"]);
     session_destroy();
     header("location: ./index.php");
