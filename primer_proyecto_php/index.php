@@ -1,9 +1,3 @@
-<?php
-    if ($_SERVER['REQUEST_METHOD'] === "POST"):
-        header("Location: ./login.php");
-        exit();
-    endif;
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +11,12 @@
     
     <?php include_once "./config.php"; ?>
     <?php include_once "./data.php"; ?>
-    <?php include_once "./controllers/middleware.php"; ?>
     
     <?php include_once "./partials/header.php"; ?>
     <?php include_once "./partials/nav.php"; ?>
 
     <h1>Primer Proyecto</h1>
-    <p>Descripcion</p>
+    <p>Web de películas</p>
 
 
     <hr>
@@ -45,12 +38,13 @@
     </section>
 
     <form action="./login.php" method="post">
-        <button class="login-b"> LOGIN </button>
+        <button class="form-b"> LOGIN </button>
     </form>
     
 
     <?php include_once "./catalogo.php"; ?>
-
     <?php include_once "./partials/footer.php"; ?>
+
+    
 </body>
 </html>

@@ -1,19 +1,31 @@
 <?php
+function pintarTarjeta($item) {
+?>
+    <div class="tarjeta">
+        <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
+        <div class="info">
+            <h3><?= $item["titulo"] ?></h3>
+            <h3><?= $item["genero"] ?></h3>
+            <h3><?= $item["anyo"] ?></h3>
+        </div>
+    </div>
+<?php
+}
 
 $peliculas = [
-    ["id" => "1", "titulo" => "p1", "genero" => "accion", "anyo" => "2000", "imagen" => "./img/peli1.jpg", "destacado" => true],
-    ["id" => "2", "titulo" => "p2", "genero" => "comedia", "anyo" => "2003", "imagen" => "./img/peli2.jpg", "destacado" => false],
-    ["id" => "3", "titulo" => "p3", "genero" => "terror", "anyo" => "2014", "imagen" => "./img/peli3.jpg", "destacado" => true],
-    ["id" => "4", "titulo" => "p4", "genero" => "accion", "anyo" => "2020", "imagen" => "./img/peli4.jpg", "destacado" => false],
-    ["id" => "5", "titulo" => "p5", "genero" => "drama", "anyo" => "1999", "imagen" => "./img/peli5.jpg", "destacado" => true],
-    ["id" => "6", "titulo" => "p6", "genero" => "romance", "anyo" => "1995", "imagen" => "./img/peli6.jpg", "destacado" => false]
+    ["id" => "1", "titulo" => "X-Men: Primera Generación", "genero" => "Accion", "anyo" => "2011", "imagen" => "./img/xmen.jpg", "destacado" => true],
+    ["id" => "2", "titulo" => "Shrek 2", "genero" => "Comedia", "anyo" => "2004", "imagen" => "./img/shrek2.jpg", "destacado" => true],
+    ["id" => "3", "titulo" => "It", "genero" => "Terror", "anyo" => "1990", "imagen" => "./img/it.jpg", "destacado" => false],
+    ["id" => "4", "titulo" => "Scooby-Doo", "genero" => "Comedia", "anyo" => "2002", "imagen" => "./img/scoobydoo.jpg", "destacado" => false],
+    ["id" => "5", "titulo" => "Los Miserables", "genero" => "Drama", "anyo" => "2012", "imagen" => "./img/losmiserables.jpg", "destacado" => true],
+    ["id" => "6", "titulo" => "Elemental", "genero" => "Romance", "anyo" => "2023", "imagen" => "./img/elemental.jpg", "destacado" => false]
 
 ];
 
 $usuarios = [
-    ["id" => "u1", "nombre" => "Ana", "password" => "passwd1", "rol" => "ADMIN"],
-    ["id" => "u2", "nombre" => "Juan", "password" => "passwd2", "rol" => "USER"],
-    ["id" => "u3", "nombre" => "Pedro", "password" => "passwd3", "rol" => "USER"]
+    ["id" => "u1", "username" => "Ana", "password" => "passwd1", "rol" => "ADMIN"],
+    ["id" => "u2", "username" => "Juan", "password" => "passwd2", "rol" => "USER"],
+    ["id" => "u3", "username" => "Pedro", "password" => "passwd3", "rol" => "USER"]
 ];
 
 ?>
