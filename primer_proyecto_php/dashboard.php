@@ -49,6 +49,8 @@ Si el usuario es ADMIN, muestra además un enlace a add_item.php-->
         </form>
     </main>
 
+    <br>
+    <hr>
     <?php include_once "./partials/footer.php"; ?>
 
 </body>
