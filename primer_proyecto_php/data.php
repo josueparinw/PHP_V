@@ -5,15 +5,23 @@ function pintarTarjeta($item) {
         <img src="<?= $item["imagen"] ?>" alt="<?= $item["titulo"] ?>">
         <div class="info">
             <h3><?= $item["titulo"] ?></h3>
-            <h3><?= $item["genero"] ?></h3>
-            <h3><?= $item["anyo"] ?></h3>
+            <p class="info-genre"><?= $item["genero"] ?></p>
+            <hr>
+            <div class="info-bottom">
+                <p class="info-year"><?= $item["anyo"] ?></p>
+                <?php if ($item["destacado"] === true): ?>
+                    <p class="info-destacado"> ★ </p>
+                <?php else: ?>
+                    <p class="info-destacado"> ☆ </p>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 <?php
 }
 
 $peliculas = [
-    ["id" => "1", "titulo" => "X-Men: Primera Generación", "genero" => "Accion", "anyo" => "2011", "imagen" => "./img/xmen.jpg", "destacado" => true],
+    ["id" => "1", "titulo" => "Origen", "genero" => "Acción", "anyo" => "2010", "imagen" => "./img/origen.jpg", "destacado" => true],
     ["id" => "2", "titulo" => "Shrek 2", "genero" => "Comedia", "anyo" => "2004", "imagen" => "./img/shrek2.jpg", "destacado" => true],
     ["id" => "3", "titulo" => "It", "genero" => "Terror", "anyo" => "1990", "imagen" => "./img/it.jpg", "destacado" => false],
     ["id" => "4", "titulo" => "Scooby-Doo", "genero" => "Comedia", "anyo" => "2002", "imagen" => "./img/scoobydoo.jpg", "destacado" => false],

@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         redirect("login", "user-inexistent");
     }
 } else {
-    redirect("login", "403");
+    redirect("index");
 }
 
 

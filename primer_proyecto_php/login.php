@@ -14,6 +14,7 @@ if (isset($_SESSION["user_logged"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
 </head>
 <body>
 
@@ -42,7 +43,7 @@ Si existe $_GET["error"] muestra un mensaje de error visible
         }
         ?>
 
-        <h2>Inicia sesión</h2>
+        <h3>Inicia sesión</h3>
 
         <div class="form-div">
             <label for="name">Usuario: </label>

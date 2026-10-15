@@ -1,47 +1,93 @@
 body {
-    background-color: #0d0c13;
+    background-color: #0f0e15;
     color: white !important;
+    padding: 40px;
+}
+
+header {
+    display: flex;
+    place-items: center;
+}
+
+header > .logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+header > .web-name {
+    font-weight: 900;
 }
 
 nav {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    place-items: center;
-    background-color: #252530;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: #1f1e25;
     padding: 20px;
-    margin:0;
+    margin: 0px;
 }
 
 section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 50px;
+}
+
+h2 {
+    margin-top: 50px;
+    width: fit-content;
+    padding-bottom: 10px;
+    border-bottom: 4px double #d4ed32;
 }
 
 .tarjeta {
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-gap: 15px;
 
-    padding: 20px;
-
-    background-color: #201f26;
+    padding: 15px;
+    background-color: #1f1e25;
 }
-
 
 img {
     display: block;
-    width: 250px;
+    width: 150px;
+    height: 210px;
     margin: 0 auto;
-}
-
-.item {
-    border: 1px solid black;
-    padding: 15px;
 }
 
 .tarjeta > .info {
     text-align: center;
+}
+
+hr {
+    border:none;
+    height:2px;
+    background-color: #02040a;
+}
+
+.info-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-year {
+    background-color: #02040a;
+    color: #3e4149;
+    width: fit-content;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.info-destacado {
+    border-radius: 30px;
+    border: 1px solid #d4ed32;
+    color: #d4ed32;
+    padding: 3px 10px;
+    padding-bottom: 6px;
 }
 
 .form-b {
@@ -64,11 +110,15 @@ img {
 }
 
 .form-login {
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    display: flex; flex-direction: column;
+    gap: 15px;
     padding: 10px;
+
     text-align: center;
-    background-color: #252530;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/logo.png);
+    background-position: center;
+
+    background-size: 45%;
     border: 5px solid #d4ed32;
     border-radius: 15px;
 }
@@ -97,7 +147,21 @@ img {
     font-weight: bold;
 }
 
-a:hover, button:hover {
+.nav-user {
+    color: black;
+    text-decoration: none;
+    border: 3px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #d4ed32;
+    font-weight: bold;
+}
+
+.nav-user:hover {
+    box-shadow: none;
+}
+
+a:hover, button:hover, .tarjeta:hover {
     box-shadow: 0px 0px 10px #d4ed32;
 }
 
