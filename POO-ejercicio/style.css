@@ -1,0 +1,36 @@
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+section > .tarjeta {
+    border: 1px solid gray;
+    padding: 20px;
+
+    width: 400px;
+    min-width: 400px;
+    border-radius: 15px;
+
+}
+
+.tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.tarjeta:hover {
+    border: 5px solid gray;
+    border-style: outset;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
