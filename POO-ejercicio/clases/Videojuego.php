@@ -6,7 +6,7 @@ class Videojuego {
     protected string $titulo;
     protected string $genero;
     protected float $precio;
-    protected int $puntuacion;
+    protected float $puntuacion;
     protected string $imagen;
     protected int $stock;
 
@@ -72,12 +72,12 @@ class Videojuego {
         endif;
     }
 
-    public function getPuntuacion(): int
+    public function getPuntuacion(): float
     {
         return $this->puntuacion;
     }
 
-    public function setPuntuacion(int $puntuacion): self
+    public function setPuntuacion(float $puntuacion): self
     {
         if (0<$puntuacion && $puntuacion<=10):
             $this->puntuacion = $puntuacion;
@@ -110,22 +110,26 @@ class Videojuego {
     public function pintarTarjeta() {
 
         ?>
+        <hr class="top-separador-games">
         <div class="tarjeta">
             <img src='<?= $this->getImagen()?>' alt='<?= $this->getTitulo()?>'>
 
+            <h2 class="titulo"><?= $this->getTitulo(); ?></h2>
+            
+
             <div class="info">
-            <h3><?= $this->getTitulo(); ?></h3>
             <p><?= $this->getGenero(); ?></p>
             <p><?= $this->getPrecio(); ?>€</p>
             <p><?= $this->getPuntuacion(); ?>☆</p>
+            </div>
 
             <?php if (!$this->tieneStock()): ?>
-                <p class='sinStock'>Agotado</p>
+                <p class='sinStock'>Stock: Agotado</p>
             <?php else: ?>
-                <p><?= $this->getStock(); ?></p>
+                <p class='stock'>Stock: <?= $this->getStock(); ?></p>
             <?php endif; ?>
-            </div>
         </div>
+        <hr class="bottom-separador-games">
         <?php
     }
 
