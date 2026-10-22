@@ -110,15 +110,17 @@ class Videojuego {
     public function pintarTarjeta() {
 
         ?>
-        <hr class="top-separador-games">
         <div class="tarjeta">
             <img src='<?= $this->getImagen()?>' alt='<?= $this->getTitulo()?>'>
 
-            <h2 class="titulo"><?= $this->getTitulo(); ?></h2>
+            <div class="info">
+                <p class="genre"><?= $this->getGenero(); ?></p>
+                <h2 class="titulo"><?= $this->getTitulo(); ?></h2>
+
+            </div>
             
 
-            <div class="info">
-            <p><?= $this->getGenero(); ?></p>
+            <div class="details">
             <p><?= $this->getPrecio(); ?>€</p>
             <p><?= $this->getPuntuacion(); ?>☆</p>
             </div>
@@ -129,7 +131,6 @@ class Videojuego {
                 <p class='stock'>Stock: <?= $this->getStock(); ?></p>
             <?php endif; ?>
         </div>
-        <hr class="bottom-separador-games">
         <?php
     }
 
