@@ -6,6 +6,7 @@ class Videojuego {
     protected string $titulo;
     protected string $genero;
     protected float $precio;
+    protected float $precioOg;
     protected float $puntuacion;
     protected string $imagen;
     protected int $stock;
@@ -15,16 +16,11 @@ class Videojuego {
         $this->titulo = $titulo;
         $this->genero = $genero;
         $this->precio = $precio;
+        $this->precioOg = $this->precio;
         $this->puntuacion = $puntuacion;
         $this->imagen = $imagen;
         $this->stock = $stock;
     }
-
-    /*
-- Setters con validación para `precio` (mayor que 0) y `puntuacion` (entre 0 y 10)
-- Método `tieneStock()` — devuelve `true` si el stock es mayor que 0
-- Método `aplicarDescuento($porcentaje)` — devuelve el precio con el descuento aplicado
-- Método `filter($criterio)` — devuelve `true` o `false` según el criterio:*/
 
     public function getId(): int
     {
@@ -72,6 +68,17 @@ class Videojuego {
         endif;
     }
 
+    public function getPrecioOg(): float
+    {
+        return $this->precioOg;
+    }
+
+    public function setPrecioOg(float $precioOg): self
+    {
+        $this->precioOg = $precioOg;
+        return $this;
+    }
+
     public function getPuntuacion(): float
     {
         return $this->puntuacion;
@@ -107,7 +114,7 @@ class Videojuego {
         return $this;
     }
 
-    public function pintarTarjeta() {
+    public function pintarTarjeta($tieneDscto = false) {
 
         ?>
         <div class="tarjeta">
@@ -121,8 +128,17 @@ class Videojuego {
             
 
             <div class="details">
-            <p><?= $this->getPrecio(); ?>€</p>
-            <p><?= $this->getPuntuacion(); ?>☆</p>
+                <div class='precios'>
+                
+                    <?php if($tieneDscto):?>
+                        <p class='precioOg'><?= $this->getPrecioOg(); ?>€</p>
+                    <?php endif; ?>
+
+                    <p><?= $this->getPrecio(); ?>€</p>
+
+                </div>
+
+                <p><?= $this->getPuntuacion(); ?>☆</p>
             </div>
 
             <?php if (!$this->tieneStock()): ?>
@@ -140,7 +156,7 @@ class Videojuego {
 
     public function aplicarDescuento($porcentaje){
         $dscto = ($this->getPrecio()*$porcentaje/100);
-        return ($this->getPrecio() - $dscto);
+        return round($this->getPrecio() - $dscto, 2);
     }
 
     public function filter($criterio){

@@ -50,7 +50,7 @@ nav > a {
     margin-left: 20px;
     margin-top: 80px;
     margin-bottom: 0px;
-    text-decoration: overline;
+    text-decoration: underline;
 }
 
 section {
@@ -78,9 +78,14 @@ section > .tarjeta {
 
 
 .tarjeta > .details  {
-    top: 100px;
-    right: 100px;
+    top: 80px;
+    right: 90px;
     font-size: x-large;
+    line-height: 0px;
+    padding: 10px 60px;
+    background-color: rgba(57, 35, 102, 0.8);
+    border: 1px solid #160733;
+    border-radius: 5px;
 }
 
 .info {
@@ -110,12 +115,10 @@ section > .tarjeta {
     text-decoration: underline;
 }
 
-hr {
-    width: 1010px;
-    border: none;
-}
 
 .top-separador-games {
+    width: 1010px;
+    border: none;
     margin-top: 40px;
     margin-bottom: 0px;
     border-top: 1px solid #443563;
@@ -157,4 +160,20 @@ img {
 
 .sinStock {
     background-color: red;
+}
+
+.precios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.precioOg {
+    text-decoration: line-through;
+    color: gray;
+}
+
+footer {
+    text-align: center;
 }

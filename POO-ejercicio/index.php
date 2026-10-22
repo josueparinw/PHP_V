@@ -2,9 +2,9 @@
 
 $games = [
     new Videojuego(1, "The Legend of Zelda: <br>Ocarina of Time", "Aventura", 59.99, 9.5, "./img/zelda.jpg", 0),
-    new Videojuego(2, "Minecraft", "Sandbox", 29.99, 9, "./img/minecraft.jpg", 24),
-    new Videojuego(3, "Call Of Duty", "Shooter", 79.99, 8, "./img/cod.jpg", 67),
-    new Videojuego(4, "Cuphead", "Plataformas", 19.99, 8.5, "./img/cuphead.jpg", 99),
+    new Videojuego(2, "Cuphead", "Plataformas", 19.99, 8.5, "./img/cuphead.jpg", 99),
+    new Videojuego(3, "Minecraft", "Sandbox", 29.99, 9, "./img/minecraft.jpg", 24),
+    new Videojuego(4, "Call Of Duty", "Shooter", 79.99, 8, "./img/cod.jpg", 67),
     new Videojuego(5, "Animal Crossing", "Simulación", 59.99, 8.5, "./img/animalcrossing.jpg", 0),
     new Videojuego(6, "Five Nights At Freddy's", "Terror", 7.99, 8, "./img/fnaf.jpg", 666),
     new Videojuego(7, "Hollow Knight", "Metroidvania", 14.99, 9, "./img/hollowknight.jpg", 0),
@@ -66,18 +66,20 @@ $games = [
     <?php
         foreach ($games as $game):
             if ($game->filter("oferta")):
+                $tieneDscto = True;
 
-                $precioConDscto = number_format($game->aplicarDescuento(20), 2, '.', '');
+                $precioConDscto = $game->aplicarDescuento(20);
 
                 $game->setPrecio($precioConDscto);
 
-                $game->pintarTarjeta();
+                $game->pintarTarjeta($tieneDscto);
             
             endif;
         endforeach;
     ?>
     </section>
     
+    <hr>
 
     <?php include_once "./partials/footer.php" ?>
 

@@ -1,6 +1,3 @@
 <footer>
-    <p>
-        este es Footer
-    </p>
-
+    <p> © Valeryn Navarro, 2026 </p>
 </footer>
