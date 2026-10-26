@@ -21,6 +21,8 @@ ADMIN:           Inicio | Catalogo | Dashboard | Añadir item | Logout
 
         <a href="controllers/logout.php">Logout</a>
     
+        <a class="nav-user">Usuari@ loguead@: <?=$_SESSION["user_logged"]?></a>
+        
     <?php
     else: ?>
 
@@ -29,10 +31,5 @@ ADMIN:           Inicio | Catalogo | Dashboard | Añadir item | Logout
     <?php
     endif;?>
 
-    <?php
-    if (isset($_SESSION["user_logged"])): ?>
-    <a class="nav-user">Usuari@ loguead@: <?=$_SESSION["user_logged"]?></a>
-    <?php
-    endif; ?>
     
 </nav>
