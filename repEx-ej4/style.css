@@ -1,0 +1,38 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-evenly;
+}
+
+.tarjeta.no-disp {
+    border: 2px solid gray;
+}
+
+.tarjeta {
+    width: 200px;
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.tarjeta .info .al {
+    color: red;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.tarjeta h3 {
+    text-shadow: 5px 5px 8px gray;
+}
+
+footer {
+    text-align: center;
+}

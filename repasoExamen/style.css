@@ -1,0 +1,15 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    width: 120px;
+    border: 1px dotted gray;
+    background-color: rgb(196, 114, 255);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}

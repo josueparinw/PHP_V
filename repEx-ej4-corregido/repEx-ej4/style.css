@@ -1,0 +1,59 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-evenly;
+}
+
+.tarjeta {
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(255, 186, 117);
+    overflow: hidden;
+}
+
+.tarjeta img {
+    max-width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjeta .info .al {
+    color: #a32626;
+}
+
+/* Estilo especial para los platos que no están disponibles */
+.tarjeta.no-disp {
+    border: 2px solid #999;
+    background-color: #e5e5e5;
+    color: #777;
+}
+
+.tarjeta.no-disp img {
+    filter: grayscale(100%);
+    opacity: 0.55;
+}
+
+.tarjeta.no-disp .info p,
+.tarjeta.no-disp .info h3,
+.tarjeta.no-disp .info h4 {
+    color: #777;
+}
+
+/* Etiqueta de plato no disponible */
+.tarjeta .no-disp2 {
+    display: inline-block;
+    margin: 8px 0 0;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
