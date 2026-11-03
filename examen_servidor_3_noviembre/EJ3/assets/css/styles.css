@@ -1,0 +1,24 @@
+
+
+/* Estilos de la agenda */
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.tarjeta {
+    border-top: 1px solid gray ;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.tarjeta > .der {
+    text-align: right;
+}
