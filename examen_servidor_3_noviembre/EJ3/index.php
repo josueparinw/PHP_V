@@ -34,12 +34,19 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 $contador++;
 
         }
-    }
+    }////////////
+    elseif ($buscar && $categoria=="todas"){
+        foreach($eventos as $evento){
+            if( str_contains(mb_strtolower($evento["titulo"]), mb_strtolower($buscar))  ){
+                include "./partials/tarjeta.php";
+                $contador++;
+            }
+        }
+    }////////////
     else {
         foreach($eventos as $evento){
             include "./partials/tarjeta.php";
-                $contador++;
-
+            $contador++;
         }
     }
 
